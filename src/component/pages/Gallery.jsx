@@ -44,173 +44,203 @@ function Gallery() {
 
       {/* Header */}
 
-<nav className="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-lg border-b border-white/10">
+  <nav className="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
 
-  <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-5">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-8 py-4">
 
-    {/* Logo */}
-    <div className="flex items-center gap-3">
+          {/* LOGO */}
 
-      <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-2xl">
-        Wc
-      </div>
+          <Link
+            to="/Home"
+            className="flex items-center gap-3"
+          >
 
-      <div>
-        <p className="text-yellow-400 text-xs tracking-[4px]">
-          <b>Edison</b>
-        </p>
+            <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white text-xl font-extrabold border-2 border-yellow-400">
+              Wc
+            </div>
 
-        <h1 className="text-white text-2xl font-bold">
-          Wild Connector
-        </h1>
+            <div>
 
-        <p className="text-yellow-400 text-xs tracking-[4px]">
-          SAFARIS
-        </p>
-      </div>
+              <p className="text-yellow-400 text-[10px] tracking-[4px] font-bold">
+                Edison
+              </p>
 
-    </div>
+              <h1 className="text-white text-xl md:text-2xl font-bold">
+                Wild Connector
+              </h1>
 
+              <p className="text-yellow-400 text-[9px] tracking-[4px] font-bold">
+                SAFARIS
+              </p>
 
-    {/* Desktop Menu */}
-    <div className="hidden lg:flex gap-10">
+            </div>
 
-      <Link
-        className="text-white hover:text-yellow-400 duration-300"
-        to="/Home"
-      >
-        Home
-      </Link>
-
-      <Link
-        className="text-white hover:text-yellow-400 duration-300"
-        to="/Tours"
-      >
-        Tours
-      </Link>
-
-      <Link
-        className="text-white hover:text-yellow-400 duration-300"
-        to="/Destinations"
-      >
-        Destinations
-      </Link>
-
-      <Link
-        className="text-white hover:text-yellow-400 duration-300"
-        to="/Visit"
-      >
-        Visit Us ▼
-      </Link>
-
-      <Link
-        className="text-white hover:text-yellow-400 duration-300"
-        to="/contact"
-      >
-        Contact
-      </Link>
-
-      <Link
-        className="text-white hover:text-yellow-400 duration-300"
-        to="/Gallery"
-      >
-        Gallery
-      </Link>
-
-    </div>
+          </Link>
 
 
-    {/* Book Safari - Desktop */}
-    <div className="hidden lg:block">
-      <Link
-        to="/Booking"
-        className="bg-yellow-500 hover:bg-yellow-400 px-6 py-3 rounded-full font-bold text-black"
-      >
-        Book Safari
-      </Link>
-    </div>
+          {/* DESKTOP MENU */}
+
+          <div className="hidden lg:flex items-center gap-8">
+
+            <Link
+              className="text-white hover:text-yellow-400 duration-300 font-medium"
+              to="/Home"
+            >
+              Home
+            </Link>
+
+            <Link
+              className="text-white font-bold"
+              to="/Tours"
+            >
+              Tours
+            </Link>
+
+            <Link
+              className="text-white hover:text-yellow-400 duration-300"
+              to="/Destinations"
+            >
+              Destinations
+            </Link>
+
+            <Link
+              className="text-white hover:text-yellow-400 duration-300"
+              to="/Visit"
+            >
+              Visit Us
+            </Link>
+
+            <Link
+              className="text-white hover:text-yellow-400 duration-300"
+              to="/contact"
+            >
+              Contact
+            </Link>
+
+            <Link
+              className="text-yellow-400 hover:text-yellow-400 font-bold"
+              to="/Gallery"
+            >
+              Gallery
+            </Link>
+
+            <Link
+              className="text-white hover:text-yellow-400 duration-300"
+              to="/About"
+            >
+              About Us
+            </Link>
+
+            <button
+              onClick={() => {
+                if (currentAd) {
+                  openBooking(currentAd, currentAd.date);
+                }
+              }}
+              className="bg-yellow-500 hover:bg-yellow-400 px-6 py-3 rounded-full font-bold text-black transition"
+            >
+              Book Safari
+            </button>
+
+          </div>
 
 
-    {/* Mobile Menu Button */}
-    <button
-      onClick={() => setMenuOpen(!menuOpen)}
-      className="lg:hidden text-white text-3xl"
-    >
-      {menuOpen ? <FaTimes /> : <FaBars />}
-    </button>
+          {/* MOBILE MENU BUTTON */}
 
-  </div>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="lg:hidden text-white text-3xl"
+          >
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+
+        </div>
 
 
-  {/* Mobile Menu */}
-  {menuOpen && (
-    <div className="lg:hidden bg-black/95 backdrop-blur-lg border-t border-white/10">
+        {/* MOBILE MENU */}
 
-      <div className="flex flex-col px-8 py-6 gap-6">
+        {menuOpen && (
 
-        <Link
-          to="/Home"
-          onClick={() => setMenuOpen(false)}
-          className="text-white text-lg hover:text-yellow-400"
-        >
-          Home
-        </Link>
+          <div className="lg:hidden bg-black/95 backdrop-blur-lg border-t border-white/10">
 
-        <Link
-          to="/Tours"
-          onClick={() => setMenuOpen(false)}
-          className="text-white text-lg hover:text-yellow-400"
-        >
-          Tours
-        </Link>
+            <div className="flex flex-col px-8 py-6 gap-5">
 
-        <Link
-          to="/Destinations"
-          onClick={() => setMenuOpen(false)}
-          className="text-white text-lg hover:text-yellow-400"
-        >
-          Destinations
-        </Link>
+              <Link
+                to="/Home"
+                onClick={() => setMenuOpen(false)}
+                className="text-white text-lg hover:text-yellow-400"
+              >
+                Home
+              </Link>
 
-        <Link
-          to="/Visit"
-          onClick={() => setMenuOpen(false)}
-          className="text-white text-lg hover:text-yellow-400"
-        >
-          Visit Us
-        </Link>
+              <Link
+                to="/Tours"
+                onClick={() => setMenuOpen(false)}
+                className="text-white text-lg font-bold"
+              >
+                Tours
+              </Link>
 
-        <Link
-          to="/contact"
-          onClick={() => setMenuOpen(false)}
-          className="text-white text-lg hover:text-yellow-400"
-        >
-          Contact
-        </Link>
+              <Link
+                to="/Destinations"
+                onClick={() => setMenuOpen(false)}
+                className="text-white text-lg hover:text-yellow-400"
+              >
+                Destinations
+              </Link>
 
-        <Link
-          to="/Gallery"
-          onClick={() => setMenuOpen(false)}
-          className="text-white text-lg hover:text-yellow-400"
-        >
-          Gallery
-        </Link>
+              <Link
+                to="/Visit"
+                onClick={() => setMenuOpen(false)}
+                className="text-white text-lg hover:text-yellow-400"
+              >
+                Visit Us
+              </Link>
 
-        {/* Book Safari */}
-        <Link
-          to="/Booking"
-          onClick={() => setMenuOpen(false)}
-          className="bg-yellow-500 hover:bg-yellow-400 text-black text-center px-6 py-3 rounded-full font-bold"
-        >
-          Book Safari
-        </Link>
+              <Link
+                to="/contact"
+                onClick={() => setMenuOpen(false)}
+                className="text-white text-lg hover:text-yellow-400"
+              >
+                Contact
+              </Link>
 
-      </div>
+              <Link
+                to="/Gallery"
+                onClick={() => setMenuOpen(false)}
+                className="text-white text-lg hover:text-yellow-400"
+              >
+                Gallery
+              </Link>
 
-    </div>
-  )}
+              <Link
+                to="/About"
+                onClick={() => setMenuOpen(false)}
+                className="text-white text-lg hover:text-yellow-400"
+              >
+                About Us
+              </Link>
 
-</nav>
+              <button
+                onClick={() => {
+                  setMenuOpen(false);
+
+                  if (currentAd) {
+                    openBooking(currentAd, currentAd.date);
+                  }
+                }}
+                className="bg-yellow-500 hover:bg-yellow-400 text-black text-center px-6 py-3 rounded-full font-bold"
+              >
+                Book Safari
+              </button>
+
+            </div>
+
+          </div>
+
+        )}
+
+      </nav>
 <br/><br/>
 
 
