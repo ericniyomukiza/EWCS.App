@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import { Link } from "react-router-dom";
 import {
   FaPlane,
@@ -111,7 +111,7 @@ const [isOpen, setIsOpen] = useState(false);
             </Link>
 
             <Link
-              className="text-yellow-400 font-bold"
+              className="text-white font-bold"
               to="/Tours"
             >
               Tours
@@ -160,7 +160,7 @@ const [isOpen, setIsOpen] = useState(false);
               }}
               className="bg-yellow-500 hover:bg-yellow-400 px-6 py-3 rounded-full font-bold text-black transition"
             >
-              Book Safari
+            <Link to={"/booking"}>Book Safari</Link>
             </button>
 
           </div>
@@ -252,7 +252,7 @@ const [isOpen, setIsOpen] = useState(false);
                 }}
                 className="bg-yellow-500 hover:bg-yellow-400 text-black text-center px-6 py-3 rounded-full font-bold"
               >
-                Book Safari
+              <Link to={"/booking"}>Book Safari</Link>
               </button>
 
             </div>

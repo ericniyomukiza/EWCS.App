@@ -23,19 +23,19 @@ import {
 const heroImages = [
   {
     image:
-      "https://img.sanishtech.com/u/6bf6ff2760e82b158c3e521acc8fdec1.jpeg",
+      "src/component/images/About.jpeg",
     title: "Connect With The Wild",
     text: "Discover unforgettable wildlife adventures across Africa.",
   },
   {
     image:
-      "https://img.sanishtech.com/u/bb12002d634680944d500a18c8407e99.jpeg",
+      "src/component/images/WhatsApp Image 2026-09-13 at 8.38.51 AM (1).jpeg",
     title: "Experience Rwanda",
     text: "Explore beautiful landscapes, wildlife and African culture.",
   },
   {
     image:
-      "https://img.sanishtech.com/u/27209f19f46fecea3528a2b4d4754872.jpeg",
+      "src/component/images/WhatsApp Image 2026-09-14 at 8.29.01 PM.jpeg",
     title: "Discover Nature",
     text: "Walk into the heart of nature and create unforgettable memories.",
   },
@@ -376,7 +376,7 @@ const handleFeedbackSubmit = () => {
             </p>
 
             <Link
-              to="/book-safari"
+              to="/booking"
               className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-9 py-4 rounded-full transition duration-300"
             >
               Book Your Safari
@@ -470,7 +470,7 @@ const handleFeedbackSubmit = () => {
           <div className="relative">
 
             <img
-              src="https://img.sanishtech.com/u/47c7347501287e17162af98c9d62c942.jpeg"
+              src="src/component/images/dh.jpeg"
               alt="African safari"
               className="w-full h-[450px] object-cover rounded-3xl shadow-xl"
             />
@@ -533,7 +533,7 @@ ABOUT OUR TEAM
     <div className="relative h-80 overflow-hidden">
 
       <img
-        src="https://img.sanishtech.com/u/a6cafc2a2d99c9cdf458e4a1f5ab7e30.jpg"
+        src="src/component/images/Agents.jpeg"
         alt="Edison - Founder of Wild Connector Safaris"
         className="w-full h-full object-cover
                    group-hover:scale-110 transition duration-700"
@@ -579,7 +579,7 @@ ABOUT OUR TEAM
     <div className="relative h-80 overflow-hidden">
 
       <img
-        src="https://img.sanishtech.com/u/47c7347501287e17162af98c9d62c942.jpeg"
+        src="src/component/images/ffsdsd.jpeg"
         alt="Safari team member"
         className="w-full h-full object-cover
                    group-hover:scale-110 transition duration-700"
@@ -624,7 +624,7 @@ ABOUT OUR TEAM
     <div className="relative h-80 overflow-hidden">
 
       <img
-        src="https://img.sanishtech.com/u/23f5555cd880b9b8bcb55fb1c3cf1c20.jpeg"
+        src="src/component/images/hsdj.jpeg"
         alt="Local community experience"
         className="w-full h-full object-cover
                    group-hover:scale-110 transition duration-700"

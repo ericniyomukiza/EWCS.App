@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FaWhatsapp,
@@ -120,7 +120,7 @@ const [menuOpen, setMenuOpen] = useState(false);
             </Link>
 
             <Link
-              className="text-yellow-400 font-bold"
+              className="text-white font-bold"
               to="/Tours"
             >
               Tours
@@ -169,7 +169,7 @@ const [menuOpen, setMenuOpen] = useState(false);
               }}
               className="bg-yellow-500 hover:bg-yellow-400 px-6 py-3 rounded-full font-bold text-black transition"
             >
-              Book Safari
+             <Link to={"/booking"}>Book Safari</Link> 
             </button>
 
           </div>
@@ -261,7 +261,7 @@ const [menuOpen, setMenuOpen] = useState(false);
                 }}
                 className="bg-yellow-500 hover:bg-yellow-400 text-black text-center px-6 py-3 rounded-full font-bold"
               >
-                Book Safari
+               <Link to={"/booking"}>Book Safari</Link>
               </button>
 
             </div>
@@ -278,7 +278,7 @@ const [menuOpen, setMenuOpen] = useState(false);
         className="h-[60vh] bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1489392191049-fc10c97e64b6')"
+            "url('src/component/images/WhatsApp Image 2026-09-13 at 8.38.33 AM.jpeg')"
         }}
       >
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect  } from "react";
+import { useState, useEffect  } from "react";
 import { Link } from "react-router-dom";
 import { FaWhatsapp, FaFacebookF, FaInstagram,
           FaTwitter, FaYoutube, FaMapMarkerAlt,FaPaperPlane, 
@@ -147,7 +147,7 @@ const receiverNumber = "250787180358";
               }}
               className="bg-yellow-500 hover:bg-yellow-400 px-6 py-3 rounded-full font-bold text-black transition"
             >
-              Book Safari
+            <Link to={"/booking"}>Book Safari</Link>
             </button>
 
           </div>
@@ -239,7 +239,7 @@ const receiverNumber = "250787180358";
                 }}
                 className="bg-yellow-500 hover:bg-yellow-400 text-black text-center px-6 py-3 rounded-full font-bold"
               >
-                Book Safari
+              <Link to={"/booking"}>Book Safari</Link>
               </button>
 
             </div>

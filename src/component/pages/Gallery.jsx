@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaWhatsapp, FaFacebookF, FaInstagram,FaPaperPlane,
          FaTwitter, FaYoutube, FaMapMarkerAlt,FaBars, FaTimes, 
          FaPhone, FaEnvelope, FaArrowRight, FaHeart } from "react-icons/fa";
+import React from "react";
 function Gallery() {
   const [menuOpen, setMenuOpen] = useState(false);
    const [isOpen, setIsOpen] = useState(false);
@@ -139,7 +140,7 @@ function Gallery() {
               }}
               className="bg-yellow-500 hover:bg-yellow-400 px-6 py-3 rounded-full font-bold text-black transition"
             >
-              Book Safari
+            <Link to={"/booking"}>Book Safari</Link>
             </button>
 
           </div>
@@ -231,7 +232,7 @@ function Gallery() {
                 }}
                 className="bg-yellow-500 hover:bg-yellow-400 text-black text-center px-6 py-3 rounded-full font-bold"
               >
-                Book Safari
+              <Link to={"/booking"}>Book Safari</Link>
               </button>
 
             </div>
