@@ -628,7 +628,7 @@ const [isOpen, setIsOpen] = useState(false);
             <div className="relative">
 
               <img
-                src="https://img.sanishtech.com/u/62b805f907e2ed766e6c1e5c023d876b.webp"
+                src="src/component/images/WhatsApp Image 2026-09-13 at 8.46.39 AM.jpeg"
                 alt="Wild Connector Safaris"
                 className="
                   w-[55px]
